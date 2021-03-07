@@ -1,4 +1,6 @@
-var THREE = require('three')
+// var THREE = require('three')
+// import THREE from 'three
+import * as THREE from 'three'
 
 var camera, scene, renderer;
 let geometry, materail, mesh;
@@ -13,6 +15,7 @@ function initRenderer() {
 // 相机
 function initCamera() {
   // 透视投影相机 https://www.cnblogs.com/xulei1992/p/5709677.html
+  camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 100);
   camera.position.z = 1
 }
 
@@ -28,6 +31,7 @@ function initObj() {
   mesh = new THREE.Mesh(geometry, materail);
   scene.add(mesh)
 }
+
 
 // 渲染动画
 function render() {
