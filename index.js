@@ -15,7 +15,7 @@ function initRenderer() {
 // 相机
 function initCamera() {
   // 透视投影相机 https://www.cnblogs.com/xulei1992/p/5709677.html
-  camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 100);
+  camera = new THREE.PerspectiveCamera(80, window.innerWidth / window.innerHeight, 0.1, 100);
   camera.position.z = 1
 }
 
